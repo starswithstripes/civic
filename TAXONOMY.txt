@@ -1,0 +1,16 @@
+taxonomy
+------------------------------------------
+
+About: Until there is a stable faux taxonomy export module
+to make taxonomies exportable, use the standard values
+below across installations of Owh.
+
+name			          vid
+======		         	====
+Keyword		      	    1
+Event Categories    	2
+Resource Categories 	3
+Video Categories 	    4
+Event Categories      5 (legacy, Owh 6.x-0.2) 
+Support Ticket Tags   6
+

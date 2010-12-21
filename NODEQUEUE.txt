@@ -1,0 +1,118 @@
+nodequeue
+----------------------------------
+
+About: Until there is a stable faux nodequeue export module
+to make taxonomies exportable, use the standard values
+below across installations of Owh.
+
+We can't use functions like nodequeue_save()
+(http://drupalcontrib.org/api/search/6/nodequeue) until 
+the export issue is resolved.
+
+qid   title                                        size   owner 
+===   ======                                       ====   ======  
+1     Front Page Slideshow                         4     nodequeue
+2     Featured Posts                               6     nodequeue
+3     Featured Video                               1     nodequeue
+4     Front Page Main                              1     nodequeue
+5     Front Page Slideshow (Panoramic 4)           6     nodequeue
+6     Front Page Slideshow (Panoramic 3)           1     nodequeue
+
+
+table: nodequeue_queue
+----------------------------
+mysql> describe nodequeue_queue;
++----------------+------------------+------+-----+---------+----------------+
+| Field          | Type             | Null | Key | Default | Extra          |
++----------------+------------------+------+-----+---------+----------------+
+| qid            | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| title          | varchar(255)     | NO   |     | NULL    |                |
+| subqueue_title | varchar(255)     | NO   |     | NULL    |                |
+| size           | int(11)          | YES  |     | 0       |                |
+| link           | varchar(40)      | YES  |     | NULL    |                |
+| link_remove    | varchar(40)      | YES  |     | NULL    |                |
+| owner          | varchar(255)     | YES  |     | NULL    |                |
+| show_in_ui     | tinyint(4)       | YES  |     | 1       |                |
+| show_in_tab    | tinyint(4)       | YES  |     | 1       |                |
+| show_in_links  | tinyint(4)       | YES  |     | 1       |                |
+| reference      | varchar(255)     | YES  |     | 0       |                |
+| reverse        | tinyint(4)       | YES  |     | NULL    |                |
+| i18n           | tinyint(4)       | YES  |     | 1       |                |
++----------------+------------------+------+-----+---------+----------------+
+
+owh.profile:
+  db_query("INSERT INTO {nodequeue_queue} "
+          ."VALUES (1,'Front Page Slideshow','',4,'','','nodequeue',1,1,0,'0',0,1),"
+          ."(2,'Featured Posts','',6,'','','nodequeue',1,1,0,'0',0,1),"
+          ."(3,'Featured Video','',1,'','','nodequeue',1,1,0,'0',0,1),"
+          ."(4,'Front Page Main ','',1,'','','nodequeue',1,1,0,'0',0,1)");
+
+slideshow_panoramic_4_nav.install: 
+  db_query("INSERT INTO {nodequeue_queue} "
+          ."VALUES (5,'Front Page Slideshow (Panoramic 4)','',6,'','','slideshow_panoramic_4_nav',1,1,0,'0',0,1)");
+
+
+table: nodequeue_roles
+----------------------------
+mysql> describe  nodequeue_roles;
++-------+---------------------+------+-----+---------+-------+
+| Field | Type                | Null | Key | Default | Extra |
++-------+---------------------+------+-----+---------+-------+
+| qid   | bigint(20) unsigned | NO   | MUL | NULL    |       |
+| rid   | bigint(20) unsigned | NO   | MUL | NULL    |       |
++-------+---------------------+------+-----+---------+-------+
+
+owh.profile:
+  db_query("INSERT INTO {nodequeue_roles} VALUES (2,4),(1,4),(4,4)");
+
+slideshow_panoramic_4_nav.install: 
+  db_query("INSERT INTO {nodequeue_roles} VALUES (5,4),(5,6)");
+
+
+table: nodequeue_subqueue
+----------------------------
+mysql> describe nodequeue_subqueue;
++-----------+------------------+------+-----+---------+----------------+
+| Field     | Type             | Null | Key | Default | Extra          |
++-----------+------------------+------+-----+---------+----------------+
+| sqid      | int(10) unsigned | NO   | PRI | NULL    | auto_increment |
+| qid       | int(10) unsigned | NO   | MUL | NULL    |                |
+| reference | varchar(255)     | YES  | MUL | 0       |                |
+| title     | varchar(255)     | YES  | MUL |         |                |
++-----------+------------------+------+-----+---------+----------------+
+
+owh.profile:
+  db_query("INSERT INTO {nodequeue_subqueue} "
+          ."VALUES (1,1,'1','Front Page Slideshow'),"
+          ."(2,2,'2','Featured Posts'),"
+          ."(3,3,'3','Featured Video'),"
+          ."(4,4,'4','Front Page Main ')");
+
+slideshow_panoramic_4_nav.install: 
+  db_query("INSERT INTO {nodequeue_subqueue} VALUES (5,5,'5','Front Page Slideshow (Panoramic 4)') ");
+
+
+table: nodequeue_types
+----------------------------
+mysql> describe nodequeue_types;
++-------+---------------------+------+-----+---------+-------+
+| Field | Type                | Null | Key | Default | Extra |
++-------+---------------------+------+-----+---------+-------+
+| qid   | bigint(20) unsigned | NO   | MUL | NULL    |       |
+| type  | varchar(255)        | YES  | MUL | NULL    |       |
++-------+---------------------+------+-----+---------+-------+
+
+owh.profile:
+  db_query("INSERT INTO {nodequeue_types} "
+          ."VALUES "
+          ."(1,'photo'),(1,'page'),(1,'news_clip'),(1,'legislation'),(1,'issue'),(1,'event'),"
+          ."(2,'press_release'),(2,'photo'),(2,'page'),(2,'news_clip'),(2,'legislation'),"
+          ."(2,'issue'),(2,'event'),(2,'bio'),(2,'video'),"
+          ."(3,'bio'),(3,'event'),(3,'issue'),(3,'legislation'),(3,'news_clip'),(3,'page'),"
+          ."(3,'press_release'),(3,'video'),"
+          ."(1,'bio'),"
+          ."(4,'page'),"
+          ."(1,'press_release'),(1,'video')");
+
+slideshow_panoramic_4_nav.install: 
+  db_query("INSERT INTO {nodequeue_types} VALUES (5,'slide') ");
