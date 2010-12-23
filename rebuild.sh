@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# This command expects to be run within the Project O (owh) profile directory. 
+# This command expects to be run within the Civic  profile directory. 
 #
 # To use this command you must have `drush make`, `cvs` and `git` installed.
 #
@@ -10,23 +10,23 @@
 if [ -f civic.make ]; then
   echo -e "\nThis command can be used to run civic.make in place "
 #  echo -e ", or to generate"
-#  echo -e "a complete distribution of Drupal O.\n\nWhich would you like?"
+#  echo -e "a complete distribution of Civic.\n\nWhich would you like?"
   echo "  [1] Press 1 to rebuild Civic in place (overwrites any changes!)."
-#  echo "  [2] (BROKEN) Build a full Project O distribution"
+#  echo "  [2] (BROKEN) Build a full Civic distribution"
   echo -e "Selection: \c"
   read SELECTION
 
   if [ $SELECTION = "1" ]; then
 
     # Run civic.make only.
-    echo "Building Project O install profile..."
+    echo "Building Civic install profile..."
     rm -Rf modules/ themes/ libraries/
     drush -y make --working-copy --no-core --contrib-destination=. civic.make
 
   elif [ $SELECTION = "2" ]; then
 
-    # Generate a complete tar.gz of Pressflow Drupal + Project O.
-    echo "Building O distribution..."
+    # Generate a complete tar.gz of Pressflow Drupal + Civic.
+    echo "Building Civic distribution..."
 
 MAKE=$(cat <<EOF
 core = "6.x"\n
