@@ -13,11 +13,8 @@
  */
 function civic_profile_details() {
   return array(
-    'name' => 'Owh',
-    'description' => 'Drupal O by StarsWithStripes.Org, '
-                    .'originally modeled after the '
-                    .'Obama White House website '
-                    .'(whitehouse.gov, 2010).',
+    'name' => 'Civic',
+    'description' => 'Civic by StarsWithStripes.Org, ',
   );
 }
 
