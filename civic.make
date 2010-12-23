@@ -163,6 +163,12 @@ projects[ax3][download][type] = "git"
 projects[ax3][download][url] = "git://github.com/bhirsch/ax3.git"
 ; projects[ax3][download][tag] = "X.X"
 
+projects[contactblock][type] = "module"
+projects[contactblock][subdir] = "custom"
+projects[contactblock][download][type] = "git"
+projects[contactblock][download][url] = "git://github.com/bhirsch/contactblock.git"
+projects[contactblock][download][tag] = "1.0"
+
 projects[extra][type] = "module"
 projects[extra][subdir] = "custom"
 projects[extra][download][type] = "git"
