@@ -15,6 +15,10 @@ projects[advanced_help][version] = 1.2
 projects[cck][subdir] = "contrib"
 projects[cck][version] = 2.8
 
+projects[constant_contact][subdir] = "contrib"
+projects[constant_contact][version] = 2.1
+
+projects[crmapi][subdir] = "contrib"
 projects[context][subdir] = "contrib"
 projects[context][version] = 3.0
 
