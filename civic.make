@@ -116,7 +116,7 @@ projects[video_filter][subdir] = "contrib"
 projects[video_filter][version] = 2.7
 
 projects[views][subdir] = "contrib"
-projects[views][version] = 2.11
+projects[views][version] = 2.12
 
 projects[views_bulk_operations][subdir] = "contrib"
 projects[views_bulk_operations][version] = 1.10
