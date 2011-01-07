@@ -332,6 +332,9 @@ function _civic_configure() {
   db_query("INSERT INTO {wysiwyg} (format, editor, settings) "
           ."VALUES (%d, '%s', '%s') ", $format, $editor, $settings);
 
+  // Set Filtered HTML to allow <p> and <u> tags.
+  variable_set('allowed_html_1', '<a> <em> <strong> <cite> <code> <ul> <ol> <li> <dl> <dt> <dd> <u><table><th><td><tr><p>');
+
   // Enable Site Managers to use Full HTMl input format
   db_query("UPDATE {filter_formats} SET roles = ',4,' WHERE name = 'Full HTML'");
 
