@@ -144,7 +144,7 @@ function _civic_modules() {
     'sws', 'sws_fields', 'sws_mgmt',
     'subtheme', 'whitehouse_subtheme',
     'related_posts', 'addthissubtheme','user1',
-    'ax3','permission',
+    'ax3',
     // Drupal O features modules: 
     'button_block', 'events', 'footer_navigation', 
     'issues', 'news_clips', 'page', 'press_releases', 
@@ -290,6 +290,13 @@ function _civic_configure() {
    * user 1's password and hijacking permissions. This lets 
    * site managers have access to approved admin pages without 
    * compromising security in a shared hosting environment.
+   * 
+   * TODO The lion's share--if not all--this stuff has been moved into
+   * features modules. Update this sql stuff accordingly.
+   * CRUD permissions now ship with the following 
+   * features modules: 
+   *  events, issues, legislation, news_clips, press_releases
+   *  staff, video, resources, agenda, sws_blog.
    */
   // Create Content Manager and Site Manager roles.
   // Use rid 4 and 6 for backwards compatibility with older install profiles.
