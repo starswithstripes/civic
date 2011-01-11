@@ -140,26 +140,103 @@ function _civic_modules() {
     'text_resize', 
     // wysiwyg
     'wysiwyg',
-    // StarsWithStripes.Org
+    // Custom Civic modules
     'sws', 'sws_fields', 'sws_mgmt',
-    'subtheme', 'whitehouse_subtheme',
-    'related_posts', 'addthissubtheme','user1',
+    'whitehouse_subtheme',
+    'related_posts', 'addthissubtheme',
     'ax3',
-    // Civic features modules: 
-    'button_block', 'events', 'footer_navigation', 
-    'issues', 'news_clips', 'page', 'press_releases', 
-    'sws_admin', 'twitter_feed', 
-    'owh_default_settings', 'owh_views',
+    // Custom Civic modules coming soon to contrib
+    //'faccess',
+    'paccess',
+    'subtheme',
+    'user1',
+
+    // Civic features modules, by feature set
+    // Administration
+      'sws_admin',
+    // Agenda
+      //'agenda',
+    // Blog
+      //'sws_blog',
+      //'recent_blog_posts__front_page',
+    // Depricated
+      'front_page',
+      'front_page_2',
+    // Dev
+      //'jobs',
+      //'slides',
+      //'slideshow_panoramic_1',
+      //'slideshow_panoramic_1_num',
+      //'slideshow_panoramic_2',
+      //'slideshow_panoramic_3',
+      //'slideshow_panoramic_4',
+      //'slideshow_panoramic_4_nav',
+      //'spanish_menus',
+    // Events
+      'events',
+      'addthis_events',
+      'buttonblock_events',
+      'relatedposts_events',
+      'upcomingevents_events',
+    // Features
+      'button_block', 
+      'owh_default_settings',
+      'owh_views',
+      'owh_default_settings', 
+      'owh_views',
+      'twitter_feed',
+      //'sws_ngp',
+    // Footer
+      'footer_navigation', 
+      'footer_navigation',
     // Front Page
-    'addthis_frontpage',
-    'buttonblock_frontpage',
-    'featuredposts_frontpage',
-    'featuredvideo_fontpage',
-    'recentposts_frontpage',
-    'twitter_frontpage',
-    'upcomingevents_frontpage',
-    'twocolslideshow_frontpage',
+      'addthis_frontpage',
+      'buttonblock_frontpage',
+      'featuredposts_frontpage',
+      'featuredvideo_fontpage',
+      'recentposts_frontpage',
+      'twitter_frontpage',
+      'upcomingevents_frontpage',
+      'twocolslideshow_frontpage',
+      //'twitter_frontpage',
     //'whitehouseslideshow_frontpage',
+    // Issues
+      'issues', 
+      'addthis_issues',
+      'buttonblock_issues',
+      'featuredposts_issues',
+      'nav_issues',
+      'relatedposts_issues',
+    // Legislation
+      //'legislation',
+    // News Clips
+      'news_clips', 
+      'addthis_newsclips',
+      'buttonblock_newsclips',
+      'featuredposts_newsclips',
+      'nav_newsclips',
+      'relatedposts_newsclips',
+    // Page
+      'page', 
+      'addthis_page',
+      'buttonblock_page',
+      'featuredposts_page',
+      'relatedposts_page',
+    // Press Releases
+      'press_releases', 
+      'addthis_pressreleases',
+      'buttonblock_pressreleases',
+      'featuredposts_pressreleases',
+      'relatedposts_pressreleases',
+    // Resources
+      //'resources',
+    // Staff
+      //'staff',
+    // Testing
+    // Video
+      //'video',
+      //'featured_video_fpm',
+      //'featuredvideo_fontpage',
   );
 }
 
@@ -492,6 +569,14 @@ function _civic_configure() {
   // Set a default footer message.
   variable_set('site_footer', '&copy; 2009 '. l('Development Seed', 'http://www.developmentseed.org', array('absolute' => TRUE)));
   // */
+
+  // Restrict package access.
+  // End users should not be able to enable/disable 
+  // depricaged, dev, aegir or test features.
+  variable_set('paccess_aegir-add-ons', TRUE);
+  variable_set('paccess_dev', TRUE);
+  variable_set('paccess_depricated', TRUE);
+  variable_set('paccess_testing', TRUE);
 }
 
 /**
