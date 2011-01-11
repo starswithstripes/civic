@@ -145,7 +145,7 @@ function _civic_modules() {
     'subtheme', 'whitehouse_subtheme',
     'related_posts', 'addthissubtheme','user1',
     'ax3',
-    // Drupal O features modules: 
+    // Civic features modules: 
     'button_block', 'events', 'footer_navigation', 
     'issues', 'news_clips', 'page', 'press_releases', 
     'sws_admin', 'twitter_feed', 
@@ -172,8 +172,8 @@ function civic_profile_task_list() {
     $tasks['civic-translation-batch'] = st('Download and import translation');
   }
   // */
-  $tasks['civic-modules-batch'] = st('Install Drupal O modules');
-  $tasks['civic-configure-batch'] = st('Configure Drupal O');
+  $tasks['civic-modules-batch'] = st('Install Civic modules');
+  $tasks['civic-configure-batch'] = st('Configure Civic');
   return $tasks;
 }
 
@@ -727,7 +727,7 @@ function system_form_install_select_locale_form_alter(&$form, $form_state) {
  * Alter the install profile configuration form and provide timezone location options.
  */
 function system_form_install_configure_form_alter(&$form, $form_state) {
-  $form['site_information']['site_name']['#default_value'] = 'Drupal O';
+  $form['site_information']['site_name']['#default_value'] = 'Civic';
   $form['site_information']['site_mail']['#default_value'] = 'admin@'. $_SERVER['HTTP_HOST'];
   $form['admin_account']['account']['name']['#default_value'] = 'superuser'; // @TODO does this work? 
   $form['admin_account']['account']['mail']['#default_value'] = 'admin@'. $_SERVER['HTTP_HOST'];
