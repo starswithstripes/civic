@@ -158,10 +158,11 @@ function _civic_modules() {
       //'agenda',
     // Blog
       //'sws_blog',
-      //'recent_blog_posts__front_page',
+      //'blogposts_frontpage',
     // Depricated
-      'front_page',
-      'front_page_2',
+      //'front_page',
+      //'front_page_2',
+      //'recent_blog_posts__front_page',
     // Dev
       //'jobs',
       //'slides',
