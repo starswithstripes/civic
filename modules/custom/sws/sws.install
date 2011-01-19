@@ -159,11 +159,88 @@ function sws_update_6028() {
   variable_set('paccess_dev', TRUE);
   variable_set('paccess_depricated', TRUE);
   variable_set('paccess_testing', TRUE);
+  variable_set('paccess_starswithstripes', TRUE);
+}
+
+/**
+ * sws update 6029: Update date formats from military time to am/pm.
+ */
+function sws_update_6029() {
+  variable_set('date_format_long', 's:16:"l, F j, Y - g:ia";');
+  variable_set('date_format_medium', 's:15:"D, m/d/Y - g:ia";');
+  variable_set('date_format_short', 's:12:"M j Y - g:ia";');
+}
+
+/**
+ * sws update 6030: Implement new Features Control Panel and related updates.
+ */
+function sws_update_6030() {
+  // Enable fcontrolpanel
+  module_enable(array('fcontrolpanel'));
+  
+  // Enable features control panel (fcp) modules.
+  $modules = array(
+    0 => array('dependency' => 'agenda', 'fcp' => 'fcp_agenda',),
+    1 => array('dependency' => 'button_block', 'fcp' => 'fcp_buttons',),
+    2 => array('dependency' => 'events', 'fcp' => 'fcp_events',),
+    3 => array('dependency' => 'twocolslideshow_frontpage', 'fcp' => 'fcp_frontpage',),
+    4 => array('dependency' => 'whitehouseslideshow_frontpage', 'fcp' => 'fcp_frontpage',),
+    5 => array('dependency' => 'issues', 'fcp' => 'fcp_issues',),
+    6 => array('dependency' => 'legislation', 'fcp' => 'fcp_legislation',),
+    7 => array('dependency' => 'news_clips', 'fcp' => 'fcp_newsclips',),
+    8 => array('dependency' => 'page', 'fcp' => 'fcp_pages',),
+    9 => array('dependency' => 'press_releases', 'fcp' => 'fcp_pressreleases',),
+    10=> array('dependency' => 'resources', 'fcp' => 'fcp_resources',),
+    11=> array('dependency' => 'staff', 'fcp' => 'fcp_staff',),
+    12=> array('dependency' => 'sws_blog', 'fcp' => 'fcp_blog',),
+    13=> array('dependency' => 'twitter_feed', 'fcp' => 'twitter_frontpage'),
+    14=> array('dependency' => 'twitter_feed', 'fcp' => 'fcp_twitterfeed_frontpage',),
+    15=> array('dependency' => 'video', 'fcp' => 'fcp_video',),
+    15=> array('dependency' => 'video', 'fcp' => 'fcp_video',),
+  );
+  $module_list = array();
+  foreach($modules as $module) {
+    if(module_exists($module['dependency'])) {
+       $module_list[] = $module['fcp']; 
+    }  
+  }
+  $module_list[] = 'fcp_administration';
+  module_enable($module_list);
+
+  // Update admin_toolbar
+  // Note: fcp modules add/remove themselves to admin toolbar, 
+  // so they don't need to be added here.
+  $admin_toolbar = variable_get('admin_toolbar', NULL);
+  $admin_toolbar['layout'] = 'horizontal';
+  $admin_toolbar['position'] = 'nw';
+  $admin_toolbar['behavior'] = 'ah';
+  $admin_toolbar = variable_get('admin_toolbar', null);
+  // Disable depricated sws_mgmt blocks and create content
+  foreach($admin_toolbar['blocks'] as $key => $value) {
+    if(substr($key, 0, 8) == 'sws_mgmt' || $key == 'admin-create') {
+      unset($admin_toolbar['blocks'][$key]);
+    }
+  }
+  variable_set('admin_toolbar', $admin_toolbar);
+
+  // Update press release variables
+  $var = variable_get('sws_pr_header', NULL);
+  variable_set('press_releases_header', $var);
+
+  $var = variable_get('sws_pr_subhead', NULL);
+  variable_set('press_releases_subhead', $var);
+
+  $var = variable_get('sws_pr_footer', NULL);
+  variable_set('press_releases_footer', $var);
+
+  // Update news clip variables
+  $var = variable_get('sws_news_clip_footer', NULL);
+  variable_set('news_clips_footer', $var);
 }
 
 /**
  * TODO for alpha2 upgrade
- * sws update 6029: Revert page feature.
+ * sws update 6030: Revert page feature.
  */
 /*
 function sws_update_6029() {
