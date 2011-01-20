@@ -172,6 +172,12 @@ projects[addthissubtheme][download][type] = "git"
 projects[addthissubtheme][download][url] = "git://github.com/bhirsch/addthissubtheme.git"
 ; projects[addthissubtheme][download][tag] = "X.X"
 
+projects[ax3][type] = "module"
+projects[ax3][subdir] = "custom"
+projects[ax3][download][type] = "git"
+projects[ax3][download][url] = "git://github.com/bhirsch/ax3.git"
+; projects[ax3][download][tag] = "X.X"
+
 projects[contactblock][type] = "module"
 projects[contactblock][subdir] = "custom"
 projects[contactblock][download][type] = "git"
@@ -244,6 +250,13 @@ projects[whitehouse_subtheme][download][type] = "git"
 projects[whitehouse_subtheme][download][url] = "git://github.com/bhirsch/whitehouse_subtheme.git"
 ; projects[whitehouse_subtheme][download][tag] = "X.X"
 
+; sws.org
+; -------
+projects[sws-org][type] = "module"
+projects[sws-org][download][type] = "git"
+projects[sws-org][download][url] = "git://github.com/bhirsch/sws-org.git"
+; projects[sws-org][download][tag] = "X.X"
+
 ; Themes
 ; ------
 projects[rubik][download][type] = "get"
@@ -282,6 +295,9 @@ projects[statehouse][download][url] = "git://github.com/bhirsch/statehouse.git"
 ; ---------
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.4.2/ckeditor_3.4.2.tar.gz"
+
+libraries[imageflow][download][type] = "get"
+libraries[imageflow][download][url] = "http://finnrudolph.de/content/ImageFlow_1.3.0.zip"
 
 libraries[jquery.ui][subdir] = "../modules/contrib/jquery_ui"
 libraries[jquery.ui][download][type] = "get"
