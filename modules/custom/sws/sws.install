@@ -214,7 +214,6 @@ function sws_update_6030() {
   $admin_toolbar['layout'] = 'horizontal';
   $admin_toolbar['position'] = 'nw';
   $admin_toolbar['behavior'] = 'ah';
-  $admin_toolbar = variable_get('admin_toolbar', null);
   // Disable depricated sws_mgmt blocks and create content
   foreach($admin_toolbar['blocks'] as $key => $value) {
     if(substr($key, 0, 8) == 'sws_mgmt' || $key == 'admin-create') {
