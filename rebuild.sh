@@ -12,7 +12,7 @@ if [ -f civic.make ]; then
 #  echo -e ", or to generate"
 #  echo -e "a complete distribution of Civic.\n\nWhich would you like?"
   echo "  [1] Press 1 to rebuild Civic in place (overwrites any changes!)."
-#  echo "  [2] (BROKEN) Build a full Civic distribution"
+#  echo "  [2] (BROKEN, fix when Civic is available for checkout from drupal.org) Build a full Civic distribution"
   echo -e "Selection: \c"
   read SELECTION
 

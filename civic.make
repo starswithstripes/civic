@@ -1,8 +1,19 @@
-api = 2
+; Civic makefile
+; ----------------
+; Build a Drupal installation profile of Civic.
+; Project Website: http://civicsites.org
+; Git: http://github.com/starswithstripes/civic
+
+; Core version
+; ------------
 core = 6.x
 
-; Contrib projects
+; API version
+; ------------
+api = 2
 
+; Contrib projects
+; ----------------
 projects[addthis][subdir] = "contrib"
 projects[addthis][version] = 2.9
 
@@ -127,8 +138,8 @@ projects[views_slideshow][version] = 2.3
 projects[views_slideshow_imageflow][subdir] = "contrib"
 projects[views_slideshow_imageflow][version] = 2.x-dev
 
-; Developer
-
+; Developer (Contrib)
+; ------------------
 projects[coder][subdir] = "developer"
 ; projects[coder][version] = X.X 
 
@@ -146,26 +157,20 @@ projects[simpletest][subdir] = "developer"
 ; projects[l10n_client][subdir] = "l10n"
 ; projects[l10n_update][subdir] = "l10n"
 
-; Features
- 
+; Civic Features Modules
+; ---------------------- 
 projects[civic_features][type] = "module"
 projects[civic_features][download][type] = "git" 
 projects[civic_features][download][url] = "git://github.com/bhirsch/civic_features.git"
 ; projects[civic_features][download][tag] = 0.0
 
 ; Custom 
-
+; ------
 projects[addthissubtheme][type] = "module"
 projects[addthissubtheme][subdir] = "custom"
 projects[addthissubtheme][download][type] = "git"
 projects[addthissubtheme][download][url] = "git://github.com/bhirsch/addthissubtheme.git"
 ; projects[addthissubtheme][download][tag] = "X.X"
-
-projects[ax3][type] = "module"
-projects[ax3][subdir] = "custom"
-projects[ax3][download][type] = "git"
-projects[ax3][download][url] = "git://github.com/bhirsch/ax3.git"
-; projects[ax3][download][tag] = "X.X"
 
 projects[contactblock][type] = "module"
 projects[contactblock][subdir] = "custom"
@@ -239,15 +244,8 @@ projects[whitehouse_subtheme][download][type] = "git"
 projects[whitehouse_subtheme][download][url] = "git://github.com/bhirsch/whitehouse_subtheme.git"
 ; projects[whitehouse_subtheme][download][tag] = "X.X"
 
-; sws.org
-
-projects[sws-org][type] = "module"
-projects[sws-org][download][type] = "git"
-projects[sws-org][download][url] = "git://github.com/bhirsch/sws-org.git"
-; projects[sws-org][download][tag] = "X.X"
-
 ; Themes
-
+; ------
 projects[rubik][download][type] = "get"
 projects[rubik][download][url] = "http://code.developmentseed.org/sites/code.developmentseed.org/files/fserver/rubik-6.x-3.0-beta1.tgz"
 projects[rubik][directory_name] = "rubik"
@@ -281,12 +279,9 @@ projects[statehouse][download][url] = "git://github.com/bhirsch/statehouse.git"
 ; projects[statehouse][download][tag] = "X.X"
 
 ; Libraries
-
+; ---------
 libraries[ckeditor][download][type] = "get"
 libraries[ckeditor][download][url] = "http://download.cksource.com/CKEditor/CKEditor/CKEditor%203.4.2/ckeditor_3.4.2.tar.gz"
-
-libraries[imageflow][download][type] = "get"
-libraries[imageflow][download][url] = "http://finnrudolph.de/content/ImageFlow_1.3.0.zip"
 
 libraries[jquery.ui][subdir] = "../modules/contrib/jquery_ui"
 libraries[jquery.ui][download][type] = "get"
