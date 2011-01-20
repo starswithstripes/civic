@@ -179,6 +179,12 @@ projects[faccess][download][type] = "git"
 projects[faccess][download][url] = "git://github.com/bhirsch/faccess.git"
 projects[faccess][download][tag] = "6.x-1.0"
 
+projects[fcontrolpanel][type] = "module"
+projects[fcontrolpanel][subdir] = "custom"
+projects[fcontrolpanel][download][type] = "git"
+projects[fcontrolpanel][download][url] = "git://github.com/bhirsch/fcontrolpanel.git"
+projects[fcontrolpanel][download][tag] = "6.x-1.0"
+
 projects[owhtranslate][type] = "module"
 projects[owhtranslate][subdir] = "custom"
 projects[owhtranslate][download][type] = "git"
