@@ -14,7 +14,7 @@ REQUIREMENTS
 Server/environment
 ------------------
 
-Project O has been tested with the following software successfully. Your mileage
+Civic has been tested with the following software successfully. Your mileage
 may vary on other configurations:
 
 * PHP 5.2+
@@ -28,7 +28,7 @@ may vary on other configurations:
 Clients
 -------
 
-Project O supports the major standards-compliant browsers, but we do most of our
+Civic supports the major standards-compliant browsers, but we do most of our
 testing against:
 
 * Firefox 2+

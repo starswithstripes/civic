@@ -3,7 +3,7 @@ taxonomy
 
 About: Until there is a stable faux taxonomy export module
 to make taxonomies exportable, use the standard values
-below across installations of Owh.
+below across installations of Civic (formerly called Owh).
 
 name			          vid
 ======		         	====
