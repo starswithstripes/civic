@@ -143,10 +143,10 @@ function _civic_modules() {
     // Custom Civic modules
     'sws', 'sws_fields', 'sws_mgmt',
     'whitehouse_subtheme',
-    'related_posts', 'addthissubtheme',
-    'ax3',
+    'related_posts', 'addthissubtheme', //'ax3',
     // Custom Civic modules coming soon to contrib
     //'faccess',
+    'fcontrolpanel',
     'paccess',
     'subtheme',
     'user1',
@@ -187,9 +187,27 @@ function _civic_modules() {
       'owh_views',
       'twitter_feed',
       //'sws_ngp',
+    // Features Control Panel (fcontrolpanel)
+      'fcp_administration',
+      //'fcp_agenda',
+      //'fcp_blog',
+      'fcp_buttons',
+      //'fcp_createcontent',
+      'fcp_events',
+      'fcp_frontpage',
+      'fcp_issues',
+      //'fcp_legislation',
+      'fcp_newsclips',
+      'fcp_pages',
+      'fcp_pressreleases',
+      //'fcp_resources',
+      //'fcp_sitemanagement',
+      //'fcp_sitesetup',
+      //'fcp_staff',
+      'fcp_twitterfeed_frontpage',
+      //'fcp_video',
     // Footer
       'footer_navigation', 
-      'footer_navigation',
     // Front Page
       'addthis_frontpage',
       'buttonblock_frontpage',
@@ -548,11 +566,12 @@ function _civic_configure() {
 
   // Set title of AddThis block to <none>
   db_query("INSERT INTO {blocks} (module, theme, title, cache) VALUES ('addthis','candidate','<none>',1)");
-  
+
+  // TODO Replace ax3 with x module.
   // create and notify user number 2
-  ax3_create_user2();
+  //ax3_create_user2(); 
   // now disable ax3. we're done with it. 
-  module_disable(array('ax3'));
+  //module_disable(array('ax3'));
 
   // Only site administrators can create users.
   variable_set('user_register', 0); 
@@ -633,7 +652,7 @@ function _civic_configure_check() {
     'options' => array('attributes' => array('title' => 'About')),
     'parent_depth_limit' => 8,
     'link_title' => 'About', // TODO handle for translation.
-    'weight' => -50,
+    'weight' => -49,
     'parent' => 'features:0',
     'menu_name' => 'features',
   );
@@ -733,7 +752,59 @@ function _civic_configure_check() {
     'owh_default_settings' => array(),
   );
   features_revert($revert);
-
+  // As of strongarm version 6.x-2.0 these variables always install "overridden".
+  // Set manually. 
+  // todo Review again with later strongarm release.
+  // Default admin toolbar: 
+  $admin_toolbar = array(
+    'layout' => 'horizontal',
+    'position' => 'nw',
+    'behavior' => 'df',
+    'blocks' => array(
+      'fcontrolpanel-0' => -1,
+      'fcontrolpanel-1' => -1,
+      'fcontrolpanel-2' => -1,
+      'fcontrolpanel-3' => -1,
+      'fcontrolpanel-4' => -1,
+      'fcontrolpanel-5' => -1,
+      'fcontrolpanel-6' => -1,
+      'fcontrolpanel-7' => -1,
+    ),
+  );
+  variable_set('admin_toolbar', $admin_toolbar);
+  // Default US date formats: 
+  //
+  // These don't work...
+  //
+  //variable_set('date_format_long', 'l, F j, Y - g:ia');
+  //variable_set('date_format_medium', 'F j, Y - g:ia');
+  //variable_set('date_format_short', 'm/d/Y - g:ia');
+  //
+  //variable_set('date_format_long', 's:16:"l, F j, Y - g:ia";');
+  //variable_set('date_format_medium', 's:15:"D, m/d/Y - g:ia";');
+  //variable_set('date_format_short', 's:12:"M j Y - g:ia";');
+  //
+  //$form_state['values']['date_format_long'] = 'l, F j, Y - g:ia';
+  //$form_state['values']['date_format_medium'] = 'F j, Y - H:i';
+  //$form_state['values']['date_format_short'] = 'm/d/Y - H:i';
+  //drupal_execute('date_api_date_formats_form', $form_state);
+  //
+  // Update database manually.
+  // long
+  $format->name = 'date_format_long';
+  $format->value = 's:16:"l, F j, Y - g:ia";'; 
+  db_query("UPDATE {variable} SET value = '%s' WHERE name = '%s'", $format->value, $format->name);
+  //drupal_write_record('variable', $format->name);
+  // medium
+  $format->name = 'date_format_medium';
+  $format->value = 's:15:"D, m/d/Y - g:ia";'; 
+  db_query("UPDATE {variable} SET value = '%s' WHERE name = '%s'", $format->value, $format->name);
+  //drupal_write_record('variable', $format->name); 
+  // short
+  $format->name = 'date_format_short';
+  $format->value = 's:12:"m/d/Y - g:ia";'; 
+  db_query("UPDATE {variable} SET value = '%s' WHERE name = '%s'", $format->value, $format->name);
+  //drupal_write_record('variable', $format->name); 
 }
 
 /**
