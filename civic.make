@@ -188,7 +188,7 @@ projects[fcontrolpanel][type] = "module"
 projects[fcontrolpanel][subdir] = "custom"
 projects[fcontrolpanel][download][type] = "git"
 projects[fcontrolpanel][download][url] = "git://github.com/bhirsch/fcontrolpanel.git"
-; projects[fcontrolpanel][download][tag] = "6.x-1.0"
+projects[fcontrolpanel][download][tag] = "6.x-1.1"
 
 projects[owhtranslate][type] = "module"
 projects[owhtranslate][subdir] = "custom"
