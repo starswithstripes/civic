@@ -202,6 +202,12 @@ projects[related_posts][download][type] = "git"
 projects[related_posts][download][url] = "git://github.com/bhirsch/related_posts.git"
 ; projects[related_posts][download][tag] = "X.X"
 
+projects[mtheme][type] = "module"
+projects[mtheme][subdir] = "custom"
+projects[mtheme][download][type] = "git"
+projects[mtheme][download][url] = "git://github.com/bhirsch/subtheme.git"
+projects[mtheme][download][tag] = "6.x-1.0-dev1"
+
 projects[subtheme][type] = "module"
 projects[subtheme][subdir] = "custom"
 projects[subtheme][download][type] = "git"
