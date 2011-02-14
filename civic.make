@@ -162,7 +162,7 @@ projects[simpletest][subdir] = "developer"
 projects[civic_features][type] = "module"
 projects[civic_features][download][type] = "git" 
 projects[civic_features][download][url] = "git://github.com/bhirsch/civic_features.git"
-; projects[civic_features][download][tag] = 0.0
+projects[civic_features][download][tag] = "6.x-1.0"
 
 ; Custom 
 ; ------
@@ -170,7 +170,7 @@ projects[addthissubtheme][type] = "module"
 projects[addthissubtheme][subdir] = "custom"
 projects[addthissubtheme][download][type] = "git"
 projects[addthissubtheme][download][url] = "git://github.com/bhirsch/addthissubtheme.git"
-; projects[addthissubtheme][download][tag] = "X.X"
+projects[addthissubtheme][download][tag] = "6.x-1.0"
 
 projects[contactblock][type] = "module"
 projects[contactblock][subdir] = "custom"
@@ -200,7 +200,7 @@ projects[related_posts][type] = "module"
 projects[related_posts][subdir] = "custom"
 projects[related_posts][download][type] = "git"
 projects[related_posts][download][url] = "git://github.com/bhirsch/related_posts.git"
-; projects[related_posts][download][tag] = "X.X"
+projects[related_posts][download][tag] = "X.X"
 
 projects[subtheme][type] = "module"
 projects[subtheme][subdir] = "custom"
@@ -212,37 +212,37 @@ projects[sws][type] = "module"
 projects[sws][subdir] = "custom"
 projects[sws][download][type] = "git"
 projects[sws][download][url] = "git://github.com/bhirsch/sws.git"
-; projects[sws][download][tag] = "X.X"
+projects[sws][download][tag] = "6.x-1.0"
 
 projects[sws_fields][type] = "module"
 projects[sws_fields][subdir] = "custom"
 projects[sws_fields][download][type] = "git"
 projects[sws_fields][download][url] = "git://github.com/bhirsch/sws_fields.git"
-; projects[sws_fields][download][tag] = "X.X"
+projects[sws_fields][download][tag] = "6.x-1.0"
 
 projects[sws_mgmt][type] = "module"
 projects[sws_mgmt][subdir] = "custom"
 projects[sws_mgmt][download][type] = "git"
 projects[sws_mgmt][download][url] = "git://github.com/bhirsch/sws_mgmt.git"
-; projects[sws_mgmt][download][tag] = "X.X"
+projects[sws_mgmt][download][tag] = "6.x-1.0"
 
 projects[swsngp][type] = "module"
 projects[swsngp][subdir] = "custom"
 projects[swsngp][download][type] = "git"
 projects[swsngp][download][url] = "git://github.com/bhirsch/swsngp.git"
-; projects[swsngp][download][tag] = "X.X"
+projects[swsngp][download][tag] = "6.x-1.0"
 
 projects[user1][type] = "module"
 projects[user1][subdir] = "custom"
 projects[user1][download][type] = "git"
 projects[user1][download][url] = "git://github.com/bhirsch/user1.git"
-; projects[user1][download][tag] = "X.X"
+projects[user1][download][tag] = "6.x-1.0"
 
 projects[whitehouse_subtheme][type] = "module"
 projects[whitehouse_subtheme][subdir] = "custom"
 projects[whitehouse_subtheme][download][type] = "git"
 projects[whitehouse_subtheme][download][url] = "git://github.com/bhirsch/whitehouse_subtheme.git"
-; projects[whitehouse_subtheme][download][tag] = "X.X"
+projects[whitehouse_subtheme][download][tag] = "6.x-1.0"
 
 ; Themes
 ; ------
@@ -270,13 +270,13 @@ projects[candidate][type] = "theme"
 projects[candidate][directory_name] = "candidate"
 projects[candidate][download][type] = "git"
 projects[candidate][download][url] = "git://github.com/bhirsch/candidate.git"
-; projects[candidate][download][tag] = "X.X"
+projects[candidate][download][tag] = "6.x-1.0"
 
 projects[statehouse][type] = "theme"
 projects[statehouse][directory_name] = "statehouse"
 projects[statehouse][download][type] = "git"
 projects[statehouse][download][url] = "git://github.com/bhirsch/statehouse.git"
-; projects[statehouse][download][tag] = "X.X"
+projects[statehouse][download][tag] = "6.x-1.0"
 
 ; Libraries
 ; ---------
