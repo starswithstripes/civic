@@ -244,12 +244,6 @@ projects[user1][download][type] = "git"
 projects[user1][download][url] = "git://github.com/bhirsch/user1.git"
 projects[user1][download][tag] = "6.x-1.0"
 
-projects[whitehouse_subtheme][type] = "module"
-projects[whitehouse_subtheme][subdir] = "custom"
-projects[whitehouse_subtheme][download][type] = "git"
-projects[whitehouse_subtheme][download][url] = "git://github.com/bhirsch/whitehouse_subtheme.git"
-projects[whitehouse_subtheme][download][tag] = "6.x-1.0"
-
 ; Themes
 ; ------
 projects[rubik][download][type] = "get"
