@@ -162,7 +162,7 @@ projects[simpletest][subdir] = "developer"
 projects[civic_features][type] = "module"
 projects[civic_features][download][type] = "git" 
 projects[civic_features][download][url] = "git://github.com/bhirsch/civic_features.git"
-projects[civic_features][download][tag] = "6.x-1.0"
+projects[civic_features][download][tag] = "6.x-1.1"
 
 ; Custom 
 ; ------
@@ -206,13 +206,13 @@ projects[mtheme][type] = "module"
 projects[mtheme][subdir] = "custom"
 projects[mtheme][download][type] = "git"
 projects[mtheme][download][url] = "git://github.com/bhirsch/mtheme.git"
-projects[mtheme][download][tag] = "6.x-1.0-dev"
+projects[mtheme][download][tag] = "6.x-1.0-alpha2"
 
 projects[subtheme][type] = "module"
 projects[subtheme][subdir] = "custom"
 projects[subtheme][download][type] = "git"
 projects[subtheme][download][url] = "git://github.com/bhirsch/subtheme.git"
-projects[subtheme][download][tag] = "6.x-1.0-dev"
+projects[subtheme][download][tag] = "6.x-1.0-alpha2"
 
 projects[sws][type] = "module"
 projects[sws][subdir] = "custom"
