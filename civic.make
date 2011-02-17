@@ -270,7 +270,7 @@ projects[candidate][type] = "theme"
 projects[candidate][directory_name] = "candidate"
 projects[candidate][download][type] = "git"
 projects[candidate][download][url] = "git://github.com/bhirsch/candidate.git"
-projects[candidate][download][tag] = "6.x-1.0"
+projects[candidate][download][tag] = "6.x-1.1"
 
 projects[statehouse][type] = "theme"
 projects[statehouse][directory_name] = "statehouse"
