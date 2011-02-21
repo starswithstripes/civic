@@ -212,7 +212,7 @@ projects[subtheme][type] = "module"
 projects[subtheme][subdir] = "custom"
 projects[subtheme][download][type] = "git"
 projects[subtheme][download][url] = "git://github.com/bhirsch/subtheme.git"
-projects[subtheme][download][tag] = "6.x-1.0-alpha2"
+projects[subtheme][download][tag] = "6.x-1.0-alpha3"
 
 projects[sws][type] = "module"
 projects[sws][subdir] = "custom"
