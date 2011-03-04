@@ -5,6 +5,14 @@ About: Until there is a stable faux taxonomy export module
 to make taxonomies exportable, use the standard values
 below across installations of Civic (formerly called Owh).
 
+Note: This practice began around features-6.x-1.0-beta6. 
+The current 6.x-1.0 release does have stable faux taxonomy 
+exportables, but no migration path to D7. Since we've waited this 
+long, we might as well wait a little longer. If migrating 
+what we've got to D7 is easier, 6.x versions of Civic may never 
+put taxonomy into features. (BH 3/3/11)
+
+
 name			          vid
 ======		         	====
 Keyword		      	    1

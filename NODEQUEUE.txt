@@ -19,8 +19,9 @@ qid   title                                        size   owner
 6     Front Page Slideshow (Panoramic 3)           1     nodequeue
 
 
-table: nodequeue_queue
-----------------------------
+Examples
+-----------
+
 mysql> describe nodequeue_queue;
 +----------------+------------------+------+-----+---------+----------------+
 | Field          | Type             | Null | Key | Default | Extra          |
