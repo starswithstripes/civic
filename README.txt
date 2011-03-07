@@ -1,7 +1,7 @@
 RESOURCES
 
 Soon, the official home of the project and git repository for 
-this install profile will live on drupal.org. Until then:
+this install profile will live on drupal.org soon. Until then:
 - Download the latest version of Civic: http://civicsites.org
 - Git repo: http://github.com/starswithstripes.com/civic
 - Report bugs here: https://github.com/starswithstripes/civic/issues

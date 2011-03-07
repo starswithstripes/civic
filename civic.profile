@@ -143,13 +143,16 @@ function _civic_modules() {
     // Custom Civic modules
     'sws', 'sws_fields', 'sws_mgmt',
     'whitehouse_subtheme',
-    'related_posts', 'addthissubtheme', //'ax3',
-    // Custom Civic modules coming soon to contrib
+    'related_posts', // 'addthissubtheme', //'ax3',
+    // Custom Civic modules coming soon to contrib on drupal.org.
+    //'contact_block',
     //'faccess',
     'fcontrolpanel',
     'paccess',
+    'mtheme',
     'subtheme',
     'user1',
+
 
     // Civic features modules, by feature set
     // Administration
@@ -228,6 +231,8 @@ function _civic_modules() {
       'relatedposts_issues',
     // Legislation
       //'legislation',
+    // Module Theme
+      'whitehouse_mtheme',
     // News Clips
       'news_clips', 
       'addthis_newsclips',
