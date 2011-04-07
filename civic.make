@@ -75,7 +75,7 @@ projects[google_analytics][subdir] = "contrib"
 projects[google_analytics][version] = 1.2
 
 projects[i18n][subdir] = "contrib"
-projects[i18n][version] = 7.x-1.0-beta4
+projects[i18n][version] = 1.0-beta4
 
 ;;;; included in core ;;;; projects[imageapi][subdir] = "contrib"
 ;;;; included in core ;;;; projects[imageapi][version] = 1.9
@@ -87,7 +87,7 @@ projects[i18n][version] = 7.x-1.0-beta4
 ;;;; included in core ;;;; projects[imagefield][version] = 3.7
 
 projects[jquery_plugin][subdir] = "contrib"
-projects[jquery_plugin][version] = 7.x-1.0
+projects[jquery_plugin][version] = 1.0
 
 ;;;; projects[jquery_ui][subdir] = "contrib"
 ;;;; projects[jquery_ui][version] = 1.4
@@ -102,7 +102,7 @@ projects[pathauto][subdir] = "contrib"
 projects[pathauto][version] = 1.0-beta1
 
 projects[role_delegation][subdir] = "contrib"
-projects[role_delegation][version] = 7.x-1.0
+projects[role_delegation][version] = 1.0
 
 ;;;; projects[rotor][subdir] = "contrib"
 ;;;; projects[rotor][version] = 2.7
