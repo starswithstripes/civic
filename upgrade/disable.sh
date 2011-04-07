@@ -1,0 +1,16 @@
+#!/bin/bash
+ 
+# Disable contrib 
+drush -l upgrade1.senatorchangdiaz.com dis -y addthis admin advanced_help constant_contact context crmapi crmngp ctools date diff embed_gmap fckeditor features feeds filefield i18n imageapi imagecache imagefield jquery_plugin jquery_ui mailchimp nodequeue pathauto role_delegation rotor strongarm submitagain taxonomy_manager text_resize token upload_element wysiwyg video_filter views views_bulk_operations views_slideshow views_slideshow_imageflow content nodereference number text optionwidgets fieldgroup userreference date_popup filefield imagefield googleanalytics 
+
+# Disable developer
+drush -l upgrade1.senatorchangdiaz.com dis -y coder devel schema simpletest 
+
+# Disable Civic features
+drush -l upgrade1.senatorchangdiaz.com dis -y sws_admin agenda sws_blog blogposts_frontpage front_page front_page_2 recent_blog_posts__front_page jobs slides slideshow_panoramic_1 slideshow_panoramic_1_num slideshow_panoramic_2 slideshow_panoramic_3 slideshow_panoramic_4 slideshow_panoramic_4_nav spanish_menus events addthis_events buttonblock_events relatedposts_events upcomingevents_events button_block  owh_default_settings owh_views owh_default_settings  owh_views twitter_feed sws_ngp fcp_administration fcp_agenda fcp_blog fcp_buttons fcp_createcontent fcp_events fcp_frontpage fcp_issues fcp_legislation fcp_newsclips fcp_pages fcp_pressreleases fcp_resources fcp_sitemanagement fcp_sitesetup fcp_staff fcp_twitterfeed_frontpage fcp_video footer_navigation  addthis_frontpage buttonblock_frontpage featuredposts_frontpage featuredvideo_fontpage recentposts_frontpage twitter_frontpage upcomingevents_frontpage twocolslideshow_frontpage twitter_frontpage whitehouseslideshow_frontpage issues  addthis_issues buttonblock_issues featuredposts_issues nav_issues relatedposts_issues legislation news_clips  addthis_newsclips buttonblock_newsclips featuredposts_newsclips nav_newsclips relatedposts_newsclips page  addthis_page buttonblock_page featuredposts_page relatedposts_page press_releases  addthis_pressreleases buttonblock_pressreleases featuredposts_pressreleases relatedposts_pressreleases resources staff video featured_video_fpm featuredvideo_fontpage 
+ 
+# Disable custom
+drush -l upgrade1.senatorchangdiaz.com dis -y addthissubtheme contactblock faccess fcontrolpanel owhtranslate related_posts subtheme sws sws_fields sws_mgmt swsngp user1 whitehouse_subtheme 
+
+# Disable themes
+drush -l upgrade1.senatorchangdiaz.com dis -y rubik tao zen whitehouse candidate statehouse 
