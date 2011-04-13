@@ -144,6 +144,11 @@ function _civic_modules() {
     'sws', 'sws_fields', 'sws_mgmt',
     'whitehouse_subtheme',
     'related_posts', // 'addthissubtheme', //'ax3',
+    // Nodequeues
+    'nodequeue_featured_posts',
+    'nodequeue_front_page_slideshow',
+    'nodequeue_featured_video',
+    'nodequeue_front_page_main',
     // Custom Civic modules coming soon to contrib on drupal.org.
     //'contact_block',
     //'faccess',
@@ -152,7 +157,6 @@ function _civic_modules() {
     'mtheme',
     'subtheme',
     'user1',
-
 
     // Civic features modules, by feature set
     // Administration
@@ -541,27 +545,7 @@ function _civic_configure() {
           ." WHERE menu_name = 'secondary-links'"); 
 
   // Nodequeues
-  db_query("INSERT INTO {nodequeue_queue} "
-          ."VALUES (1,'Front Page Slideshow','',4,'','','nodequeue',1,1,0,'0',0,1),"
-          ."(2,'Featured Posts','',6,'','','nodequeue',1,1,0,'0',0,1),"
-          ."(3,'Featured Video','',1,'','','nodequeue',1,1,0,'0',0,1),"
-          ."(4,'Front Page Main ','',1,'','','nodequeue',1,1,0,'0',0,1)");
   db_query("INSERT INTO {nodequeue_roles} VALUES (2,4),(1,4),(4,4)");
-  db_query("INSERT INTO {nodequeue_subqueue} "
-          ."VALUES (1,1,'1','Front Page Slideshow'),"
-          ."(2,2,'2','Featured Posts'),"
-          ."(3,3,'3','Featured Video'),"
-          ."(4,4,'4','Front Page Main ')");
-  db_query("INSERT INTO {nodequeue_types} "
-          ."VALUES "
-          ."(1,'photo'),(1,'page'),(1,'news_clip'),(1,'legislation'),(1,'issue'),(1,'event'),"
-          ."(2,'press_release'),(2,'photo'),(2,'page'),(2,'news_clip'),(2,'legislation'),"
-          ."(2,'issue'),(2,'event'),(2,'bio'),(2,'video'),"
-          ."(3,'bio'),(3,'event'),(3,'issue'),(3,'legislation'),(3,'news_clip'),(3,'page'),"
-          ."(3,'press_release'),(3,'video'),"
-          ."(1,'bio'),"
-          ."(4,'page'),"
-          ."(1,'press_release'),(1,'video')");
   // Rename "nodequeue" "Queue"
   variable_set('nodequeue_tab_name', "Queue");
 

@@ -2,8 +2,8 @@ nodequeue
 ----------------------------------
 
 About: Until there is a stable faux nodequeue export module
-to make taxonomies exportable, use the standard values
-below across installations of Civic (formerly called Owh).
+to make nodequeues exportable, use the standard values
+below across installations of Civic.
 
 We can't use functions like nodequeue_save()
 (http://drupalcontrib.org/api/search/6/nodequeue) until 
@@ -17,6 +17,7 @@ qid   title                                        size   owner
 4     Front Page Main                              1     nodequeue
 5     Front Page Slideshow (Panoramic 4)           6     nodequeue
 6     Front Page Slideshow (Panoramic 3)           1     nodequeue
+7     Recent Events                                3     nodequeue
 
 
 table: nodequeue_queue
