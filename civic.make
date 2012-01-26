@@ -175,7 +175,7 @@ projects[civic_features][type] = "module"
 projects[civic_features][download][type] = "git" 
 projects[civic_features][download][url] = "git://github.com/bhirsch/civic_features.git"
 projects[civic_features][download][tag] = "6.x-1.4"
-; projects[civic_features][download][branch] = "6.x-1.0-alpha3-rc1"
+; projects[civic_features][download][branch] = "6.x-2.x"
 
 ; Custom 
 ; ------
