@@ -51,8 +51,15 @@ projects[diff][version] = 2.1
 projects[embed_gmap][subdir] = "contrib"
 projects[embed_gmap][version] = 1.2
 
+
+projects[faccess][subdir] = "contrib"
+projects[faccess][download][tag] = 1.0
+
 projects[fckeditor][subdir] = "contrib"
 projects[fckeditor][version] = 1.4
+
+projects[fcontrolpanel][subdir] = "contrib"
+projects[fcontrolpanel][version] = 1.3
 
 projects[features][subdir] = "contrib"
 projects[features][version] = 1.0
@@ -138,6 +145,10 @@ projects[views_slideshow][version] = 2.3
 projects[views_slideshow_imageflow][subdir] = "contrib"
 projects[views_slideshow_imageflow][version] = 2.x-dev
 
+projects[webform][subdir] = "contrib"
+projects[webform][version] = 3.15 
+
+
 ; Developer (Contrib)
 ; ------------------
 projects[coder][subdir] = "developer"
@@ -162,7 +173,7 @@ projects[simpletest][subdir] = "developer"
 projects[civic_features][type] = "module"
 projects[civic_features][download][type] = "git" 
 projects[civic_features][download][url] = "git://github.com/bhirsch/civic_features.git"
-projects[civic_features][download][tag] = "6.x-1.0"
+projects[civic_features][download][tag] = "6.x-1.5"
 
 ; Custom 
 ; ------
@@ -177,18 +188,6 @@ projects[contactblock][subdir] = "custom"
 projects[contactblock][download][type] = "git"
 projects[contactblock][download][url] = "git://github.com/bhirsch/contactblock.git"
 projects[contactblock][download][tag] = "1.0"
-
-projects[faccess][type] = "module"
-projects[faccess][subdir] = "custom"
-projects[faccess][download][type] = "git"
-projects[faccess][download][url] = "git://github.com/bhirsch/faccess.git"
-projects[faccess][download][tag] = "6.x-1.0"
-
-projects[fcontrolpanel][type] = "module"
-projects[fcontrolpanel][subdir] = "custom"
-projects[fcontrolpanel][download][type] = "git"
-projects[fcontrolpanel][download][url] = "git://github.com/bhirsch/fcontrolpanel.git"
-projects[fcontrolpanel][download][tag] = "6.x-1.3"
 
 projects[owhtranslate][type] = "module"
 projects[owhtranslate][subdir] = "custom"
@@ -207,6 +206,7 @@ projects[subtheme][subdir] = "custom"
 projects[subtheme][download][type] = "git"
 projects[subtheme][download][url] = "git://github.com/bhirsch/subtheme.git"
 projects[subtheme][download][tag] = "6.x-0.0"
+; projects[subtheme][download][branch] = "6.x-0.x"
 
 projects[sws][type] = "module"
 projects[sws][subdir] = "custom"
@@ -246,13 +246,15 @@ projects[whitehouse_subtheme][download][tag] = "6.x-1.0"
 
 ; Themes
 ; ------
-projects[rubik][download][type] = "get"
-projects[rubik][download][url] = "http://code.developmentseed.org/sites/code.developmentseed.org/files/fserver/rubik-6.x-3.0-beta1.tgz"
+projects[rubik][download][type] = "git"
+projects[rubik][download][url] = "http://git.drupal.org/project/rubik.git"
+projects[rubik][download][tag] = 6.x-3.0-beta1
 projects[rubik][directory_name] = "rubik"
 projects[rubik][type] = "theme"
 
-projects[tao][download][type] = "get"
-projects[tao][download][url] = "http://code.developmentseed.org/sites/code.developmentseed.org/files/fserver/tao-6.x-3.1.tgz"
+projects[tao][download][type] = "git"
+projects[tao][download][url] = "http://git.drupal.org/project/tao.git"
+projects[tao][download][tag] = 6.x-3.1
 projects[tao][directory_name] = "tao"
 projects[tao][type] = "theme"
 
