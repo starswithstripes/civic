@@ -53,7 +53,7 @@ projects[embed_gmap][version] = 1.2
 
 
 projects[faccess][subdir] = "contrib"
-projects[faccess][download][tag] = 1.0
+projects[faccess][version] = 1.0
 
 projects[fckeditor][subdir] = "contrib"
 projects[fckeditor][version] = 1.4
