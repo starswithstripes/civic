@@ -173,7 +173,7 @@ projects[simpletest][subdir] = "developer"
 projects[civic_features][type] = "module"
 projects[civic_features][download][type] = "git" 
 projects[civic_features][download][url] = "git://github.com/bhirsch/civic_features.git"
-projects[civic_features][download][tag] = "6.x-1.5"
+projects[civic_features][download][tag] = "6.x-1.6"
 
 ; Custom 
 ; ------
